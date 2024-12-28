@@ -1,0 +1,27 @@
+{
+  "name": "assignment_cloud_computing",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./dist/index.js",
+    "db_push": "npx prisma db push --schema backend/prisma/schema.prisma",
+    "generate_client": "npx prisma generate --schema backend/prisma/schema.prisma",
+    "prisma_studio": "npx prisma studio --schema backend/prisma/schema.prisma",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "@prisma/client": "^6.1.0",
+    "graphql": "^16.10.0",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/typescript": "4.1.2",
+    "@graphql-codegen/typescript-resolvers": "4.4.1",
+    "@types/node": "^22.10.2",
+    "prisma": "^6.1.0"
+  }
+}

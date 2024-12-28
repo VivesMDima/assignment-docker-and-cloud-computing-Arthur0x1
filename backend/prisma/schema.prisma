@@ -1,0 +1,16 @@
+// NOTE: re-run npx prisma generate after every change to the scheme
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Rocket {
+  id       Int @id @default(autoincrement())
+  name     String
+  imageUri String
+}

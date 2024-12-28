@@ -1,0 +1,8 @@
+type Query {
+  rockets: [Rocket!]!
+}
+
+type Rocket {
+  name:     String!
+  imageUri: String!
+}
